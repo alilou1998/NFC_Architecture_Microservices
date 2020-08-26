@@ -62,7 +62,7 @@ public class TagController {
                 personne = new PersonneBean();
                 personne.setNom(strings.get(1).toUpperCase());
                 personne.setPrenom(strings.get(2).substring(0, 1).toUpperCase() + strings.get(2).substring(1));
-                microservicetagreaderProxy.addPersonne(personne);
+                //microservicetagreaderProxy.addPersonne(personne);
                 logger.info("ADD "+personne.getPrenom()+" "+personne.getNom());
             }
         }

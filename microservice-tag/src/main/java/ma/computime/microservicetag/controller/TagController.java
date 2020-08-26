@@ -54,14 +54,14 @@ public class TagController {
             personne.setNom(tagBean.getPersonne().getNom());
             personne.setPrenom(tagBean.getPersonne().getPrenom());
             personneDao.save(personne);
+            tag.setUid(tagBean.getUid());
+            nfcService.addTag(tag);
+            tag.setPersonne(personne);
         }else{
-            int id= personneDao.getId(tagBean.getPersonne().getNom(),tagBean.getPersonne().getPrenom());
-            personne = personneDao.getOne(id);
-            logger.info("Personne found :"+id+" "+personne.getNom()+" "+personne.getPrenom());
+            //int id= personneDao.getId(tagBean.getPersonne().getNom(),tagBean.getPersonne().getPrenom());
+            //personne.setPrenom(tagBean.getPersonne().getPrenom());
+            //logger.info("Personne found :"+id+" "+personne.getNom()+" "+personne.getPrenom());
         }
-        tag.setUid(tagBean.getUid());
-        nfcService.addTag(tag);
-        tag.setPersonne(personne);
         logger.info("Tag :"+tag.getUid()+" "+"Personne :"+tag.getPersonne().getPrenom()+" "+tag.getPersonne().getNom());
         return ResponseEntity.ok(nfcService.addTag(tag));
     }
