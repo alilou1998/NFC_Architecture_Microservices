@@ -1,10 +1,9 @@
-package ma.computime.eurekaserver;
+package ma.computime.microservicetagreader;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EurekaServerApplicationTests {
+class MicroserviceTagApplicationTests {
 
 	//@Test
 	void contextLoads() {

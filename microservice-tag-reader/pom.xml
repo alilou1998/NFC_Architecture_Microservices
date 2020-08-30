@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ma.computime</groupId>
-    <artifactId>microservice-tag</artifactId>
+    <artifactId>microservice-tag-reader</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>microservice-tag</name>
+    <name>microservice-tag-reader</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -84,6 +84,10 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -103,6 +107,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <finalName>tag-reader</finalName>
+                </configuration>
             </plugin>
         </plugins>
     </build>

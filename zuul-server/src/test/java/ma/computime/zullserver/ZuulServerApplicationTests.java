@@ -1,10 +1,10 @@
-package ma.computime.eurekaserver;
+package ma.computime.zullserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EurekaServerApplicationTests {
+class ZuulServerApplicationTests {
 
 	//@Test
 	void contextLoads() {
