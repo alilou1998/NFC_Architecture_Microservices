@@ -1,18 +1,24 @@
 package ma.computime.microservicetagreader.bean;
 
 
+import java.util.Date;
+
 public class TagBean {
 
     private String uid;
 
     private PersonneBean personne;
 
+    private Date registerDate;
+
+
     public TagBean() {
     }
 
-    public TagBean(String uid, PersonneBean personne) {
+    public TagBean(String uid, PersonneBean personne, Date registerDate) {
         this.uid = uid;
         this.personne = personne;
+        this.registerDate = registerDate;
     }
 
     public String getUid() {
@@ -29,5 +35,13 @@ public class TagBean {
 
     public void setPersonne(PersonneBean personne) {
         this.personne = personne;
+    }
+
+    public Date getRegisterDate() {
+        return registerDate;
+    }
+
+    public void setRegisterDate(Date registerDate) {
+        this.registerDate = registerDate;
     }
 }

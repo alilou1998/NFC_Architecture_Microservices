@@ -36,6 +36,14 @@ public class NFCServiceImpl implements NFCService {
     }
 
     @Override
+    public List<Tag> addListTag(List<Tag> list) {
+        for(Tag tag:list){
+            addTag(tag);
+        }
+        return list;
+    }
+
+    @Override
     public List<Tag> allTag() {
         return tagDao.findAll();
     }

@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -44,26 +45,26 @@ public class TagController {
     }
 
     @PostMapping("/tags")
-    public ResponseEntity<Tag> addTag(@RequestBody mDataBean mDataBean){
-        TagBean tagBean = microserviceTagReaderProxy.getFormattedTag(mDataBean);
-        Tag tag = new Tag();
-        Personne personne;
-        if(personneDao.getId(tagBean.getPersonne().getNom(),tagBean.getPersonne().getPrenom())==null){
-            logger.info("Personne not found");
-            personne = new Personne();
-            personne.setNom(tagBean.getPersonne().getNom());
-            personne.setPrenom(tagBean.getPersonne().getPrenom());
-            personneDao.save(personne);
-            tag.setUid(tagBean.getUid());
-            nfcService.addTag(tag);
-            tag.setPersonne(personne);
-        }else{
-            //int id= personneDao.getId(tagBean.getPersonne().getNom(),tagBean.getPersonne().getPrenom());
-            //personne.setPrenom(tagBean.getPersonne().getPrenom());
-            //logger.info("Personne found :"+id+" "+personne.getNom()+" "+personne.getPrenom());
+    public ResponseEntity<List<Tag>> addTag(@RequestBody List<mDataBean> listemDataBean){
+
+        List<TagBean> listetagBean = microserviceTagReaderProxy.getFormattedTag(listemDataBean);
+        List<Tag> listeTag = new ArrayList<>();
+        for(TagBean tagBean:listetagBean){
+            Tag tag = new Tag();
+            Personne personne;
+            if(personneDao.getId(tagBean.getPersonne().getNom(),tagBean.getPersonne().getPrenom())==null){
+                personne = new Personne();
+                personne.setNom(tagBean.getPersonne().getNom());
+                personne.setPrenom(tagBean.getPersonne().getPrenom());
+                personneDao.save(personne);
+                tag.setUid(tagBean.getUid());
+                nfcService.addTag(tag);
+                tag.setRegisterDate(tagBean.getRegisterDate());
+                tag.setPersonne(personne);
+            }
+            listeTag.add(tag);
         }
-        logger.info("Tag :"+tag.getUid()+" "+"Personne :"+tag.getPersonne().getPrenom()+" "+tag.getPersonne().getNom());
-        return ResponseEntity.ok(nfcService.addTag(tag));
+        return ResponseEntity.ok(nfcService.addListTag(listeTag));
     }
 
     @DeleteMapping("/tags/{uid}")

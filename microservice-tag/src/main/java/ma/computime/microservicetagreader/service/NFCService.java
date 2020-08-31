@@ -13,6 +13,8 @@ public interface NFCService {
 
     Tag addTag(Tag tag);
 
+    List<Tag> addListTag(List<Tag> list);
+
     List<Tag> allTag();
 
     void deleteTag(String s);

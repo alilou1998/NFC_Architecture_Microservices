@@ -11,6 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @SpringBootApplication(exclude = SecurityAutoConfiguration.class)
 @EnableFeignClients("ma.computime.microservicetagreader")
 public class MicroserviceTagApplication implements CommandLineRunner {
@@ -34,7 +37,8 @@ public class MicroserviceTagApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		Personne personne = new Personne("ali","alaoui");
 		personneDao.save(personne);
-		Tag tag = new Tag("TAG-1",personne);
+		Date date = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").parse("18/03/2020 07:30:20");
+		Tag tag = new Tag("TAG-1",personne,date);
 		tagDao.save(tag);
 	}
 

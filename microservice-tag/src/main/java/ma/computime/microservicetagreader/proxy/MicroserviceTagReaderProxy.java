@@ -7,11 +7,13 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.List;
+
 @FeignClient(value = "microservice-tag-reader")
 @RibbonClient(value = "microservice-tag-reader")
 public interface MicroserviceTagReaderProxy {
 
     @PostMapping("/formattedTag")
-    TagBean getFormattedTag(@RequestBody mDataBean mdata);
+    List<TagBean> getFormattedTag(@RequestBody List<mDataBean> list);
 
 }
