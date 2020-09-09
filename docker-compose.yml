@@ -57,8 +57,6 @@ services:
     image: microservice-tag
     links:
       - mysql-TAG
-    ports:
-    - '8061:8061'
     environment:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:8182/eureka
   microservice-tag-reader:
