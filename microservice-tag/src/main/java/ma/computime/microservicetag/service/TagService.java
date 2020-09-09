@@ -8,7 +8,6 @@ import java.util.Optional;
 
 public interface TagService {
 
-//    List<String> tagFormat(String s);
 
     Tag findParUid(String s);
 

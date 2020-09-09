@@ -25,8 +25,6 @@ public class TagReaderController {
     private final NFCServiceImpl nfcService;
 
 
-    Logger logger = LoggerFactory.getLogger(this.getClass());
-
     @Autowired
     public TagReaderController(NFCServiceImpl nfcService) {
         this.nfcService = nfcService;

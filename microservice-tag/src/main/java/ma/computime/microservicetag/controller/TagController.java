@@ -44,10 +44,6 @@ public class TagController {
         return ResponseEntity.ok(tagService.allTag());
     }
 
-//    @GetMapping("/tags/{uid}")
-//    public Tag getTag(@PathVariable("uid") String s) {
-//        return tagService.findParUid(s);
-//    }
 
     @GetMapping("/tags/{uid}")
     public ResponseEntity<Tag> getTag(@PathVariable("uid") String s) {
@@ -77,15 +73,6 @@ public class TagController {
                 tag.setUid(newtagBean.getUid());
                 tag.setPersonne_id(newtagBean.getPersonne_id());
             }
-//            if(personneDao.getId(tagBean.getPersonne().getNom(),tagBean.getPersonne().getPrenom())==null){
-//                personne = new Personne();
-//                personne.setNom(tagBean.getPersonne().getNom());
-//                personne.setPrenom(tagBean.getPersonne().getPrenom());
-//                personneDao.save(personne);
-//                tag.setUid(tagBean.getUid());
-//                tagService.addTag(tag);
-//                tag.setPersonne_id(personne);
-//            }
             listeTag.add(tag);
         }
         return ResponseEntity.ok(tagService.addListTag(listeTag));

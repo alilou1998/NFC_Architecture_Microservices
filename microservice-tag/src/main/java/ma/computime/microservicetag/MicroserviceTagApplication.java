@@ -34,12 +34,7 @@ public class MicroserviceTagApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-//		PersonneBean personne1 = microservicePersonneProxy.get(1);
-//		PersonneBean personne2 = microservicePersonneProxy.get(2);
-//		PersonneBean personne3 = microservicePersonneProxy.get(3);
-//		Tag tag1 = new Tag("TAG-1",personne1.getId());
-//		Tag tag2 = new Tag("TAG-2",personne2.getId());
-//		Tag tag3 = new Tag("TAG-3",personne3.getId());
+
 		Tag tag1 = new Tag("TAG-1",1);
 		Tag tag2 = new Tag("TAG-2",2);
 		Tag tag3 = new Tag("TAG-3",3);

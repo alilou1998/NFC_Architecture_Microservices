@@ -10,7 +10,6 @@ import java.util.Optional;
 @Repository
 public interface TagDao extends JpaRepository<Tag, String> {
 
-    //    @Query("select tag from Tag tag where tag.uid=:x")
     Tag findByUid(@Param("x") String s);
 
     void deleteById(String s);
