@@ -11,7 +11,9 @@ Outils :
 - Spring Admin
 
 Test : 
+
 -Authentification : POST -> http://localhost:8183/authenticate
+
                 Body :  {
                           "username":"admin",
                           "password":"admin"
@@ -20,7 +22,9 @@ Test :
                          {
                             jwt:"${your-token}"
                          }
+                         
  -Enregistrer du tag : POST -> http://localhost:8183/microservice-tag-register/tagdateregister/add
+ 
                  Body : [
                           {
                               "m":"TAG-2,13/03/2020 14:30:20"
@@ -35,7 +39,9 @@ Test :
                  Header : Authorization: Bearer ${your-token} 
                  Reponse : -200 (Http.ok)
                            -422 (Http.unprocessableEntity)
+                           
  - Employes à temps : POST -> http://localhost:8183/microservice-tag-register/tagdateregister/employeesbytime 
+ 
                     Body: {
                              "m":"13/03/2020 15:31:20,16/03/2020 14:30:20"//m:"check-in,check-out"
                           }
