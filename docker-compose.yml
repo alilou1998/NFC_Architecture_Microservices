@@ -1,0 +1,90 @@
+version: '3.0'
+services:
+  admin:
+    container_name: 'admin'
+    image: admin
+    ports:
+    - '9000:9000'
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:8182/eureka
+  mysql-TAG:
+    container_name: 'mysql-TAG'
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: '1923'
+      MYSQL_DATABASE: 'tag_database'
+      MYSQL_USER: 'ali'
+      MYSQL_PASSWORD: '1923'
+    ports:
+    - '8181:3306'
+  mysql-PERSONNE:
+    container_name: 'mysql-PERSONNE'
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: '1923'
+      MYSQL_DATABASE: 'personne_database'
+      MYSQL_USER: 'ali'
+      MYSQL_PASSWORD: '1923'
+    ports:
+      - '8282:3306'
+  mysql-REGISTER:
+    container_name: 'mysql-REGISTER'
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: '1923'
+      MYSQL_DATABASE: 'register_database'
+      MYSQL_USER: 'ali'
+      MYSQL_PASSWORD: '1923'
+    ports:
+      - '8383:3306'
+  eureka:
+    container_name: 'eureka'
+    image: eureka
+    build: ./eureka-server
+    ports:
+      - '8182:8182'
+  zuul:
+    container_name: 'zuul'
+    image: zuul
+    build: ./zuul-server
+    ports:
+    - '8183:8183'
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:8182/eureka
+  microservice-tag:
+    container_name: 'microservice-tag'
+    build: ./microservice-tag
+    image: microservice-tag
+    links:
+      - mysql-TAG
+    ports:
+    - '8061:8061'
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:8182/eureka
+  microservice-tag-reader:
+    container_name: 'microservice-tag-reader'
+    build: ./microservice-tag-reader
+    image: microservice-tag-reader
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:8182/eureka
+  microservice-personne:
+    container_name: 'microservice-personne'
+    image: microservice-personne
+    build: ./microservice-personne
+    links:
+      - mysql-PERSONNE
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:8182/eureka
+  microservice-tag-register:
+    container_name: 'microservice-tag-register'
+    image: microservice-tag-date-register
+    build: ./microservice-tag-date-register
+    links:
+      - mysql-REGISTER
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:8182/eureka
+  zipkin:
+    container_name: 'zipkin'
+    image: zipkin
+    ports:
+    - '9411:9411'
