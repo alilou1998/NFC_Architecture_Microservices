@@ -7,4 +7,6 @@ Outils :
 - Zuul 
 - Eureka
 - JWT Authentication
+- Zipkin for request interceptor
+- Spring Admin
 
