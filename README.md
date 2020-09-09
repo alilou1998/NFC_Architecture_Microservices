@@ -2,7 +2,7 @@
 
   ![Architecture](https://github.com/alilou1998/NFC_Architecture_Microservices/blob/master/NFC%20Microservices_Architecture_2.png)
 ### Architecture détaillée
-  ![Architecture détaillée](https://github.com/alilou1998/NFC_Architecture_Microservices/blob/master/NFC%20Microservices-Architecture%20detaillee.pdf)
+  ![Architecture détaillée](https://github.com/alilou1998/NFC_Architecture_Microservices/blob/master/NFC%20Microservices-Architecture%20detaillee.png)
 
 ## Outils :
 
