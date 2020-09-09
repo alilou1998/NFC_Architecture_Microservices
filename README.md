@@ -1,8 +1,8 @@
-Architecture de l'application : 
+## Architecture de l'application : 
 
   https://github.com/alilou1998/NFC_Architecture_Microservices/blob/master/NFC%20Microservices_Architecture_2.pdf
 
-Outils :
+## Outils :
 
             - Feign Client
             - Zuul 
@@ -11,7 +11,7 @@ Outils :
             - Zipkin for request interceptor
             - Spring Admin
 
-Utiliser Docker : 
+## Utiliser Docker : 
   
                 1- Se diriger vers le dossier root: mvn install
 
@@ -19,7 +19,7 @@ Utiliser Docker :
 
                 3- docker-compose up -d
 
-Test : 
+## Test : 
 
   - Authentification : POST -> http://localhost:8183/authenticate
 
