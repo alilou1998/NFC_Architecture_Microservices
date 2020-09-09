@@ -1,0 +1,15 @@
+ma\computime\microservicetag\proxy\MicroservicePersonneProxy.class
+ma\computime\microservicetag\MicroserviceTagApplication.class
+ma\computime\microservicetag\service\TagServiceImpl.class
+ma\computime\microservicetag\service\TagService.class
+ma\computime\microservicetag\feignconfig\FeignClientInterceptor.class
+ma\computime\microservicetag\exception\TagNotFoundException.class
+ma\computime\microservicetag\bean\NewTagBean.class
+ma\computime\microservicetag\bean\PersonneBean.class
+ma\computime\microservicetag\dao\TagDao.class
+ma\computime\microservicetag\config\SleuthConfig.class
+ma\computime\microservicetag\controller\TagController.class
+ma\computime\microservicetag\bean\mDataBean.class
+ma\computime\microservicetag\bean\TagBean.class
+ma\computime\microservicetag\entities\Tag.class
+ma\computime\microservicetag\proxy\MicroserviceTagReaderProxy.class

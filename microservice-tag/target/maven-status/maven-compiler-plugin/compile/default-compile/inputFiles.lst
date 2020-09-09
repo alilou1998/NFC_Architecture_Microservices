@@ -1,0 +1,17 @@
+C:\Users\alima\Desktop\Stage\GITHUB\nfc_service\microservice-tag\src\main\java\ma\computime\microservicetag\exception\FeignExceptionConfig.java
+C:\Users\alima\Desktop\Stage\GITHUB\nfc_service\microservice-tag\src\main\java\ma\computime\microservicetag\bean\mDataBean.java
+C:\Users\alima\Desktop\Stage\GITHUB\nfc_service\microservice-tag\src\main\java\ma\computime\microservicetag\proxy\MicroservicePersonneProxy.java
+C:\Users\alima\Desktop\Stage\GITHUB\nfc_service\microservice-tag\src\main\java\ma\computime\microservicetag\exception\TagNotFoundException.java
+C:\Users\alima\Desktop\Stage\GITHUB\nfc_service\microservice-tag\src\main\java\ma\computime\microservicetag\service\TagService.java
+C:\Users\alima\Desktop\Stage\GITHUB\nfc_service\microservice-tag\src\main\java\ma\computime\microservicetag\bean\TagBean.java
+C:\Users\alima\Desktop\Stage\GITHUB\nfc_service\microservice-tag\src\main\java\ma\computime\microservicetag\entities\Tag.java
+C:\Users\alima\Desktop\Stage\GITHUB\nfc_service\microservice-tag\src\main\java\ma\computime\microservicetag\service\TagServiceImpl.java
+C:\Users\alima\Desktop\Stage\GITHUB\nfc_service\microservice-tag\src\main\java\ma\computime\microservicetag\dao\TagDao.java
+C:\Users\alima\Desktop\Stage\GITHUB\nfc_service\microservice-tag\src\main\java\ma\computime\microservicetag\exception\CustomErrorDecoder.java
+C:\Users\alima\Desktop\Stage\GITHUB\nfc_service\microservice-tag\src\main\java\ma\computime\microservicetag\MicroserviceTagApplication.java
+C:\Users\alima\Desktop\Stage\GITHUB\nfc_service\microservice-tag\src\main\java\ma\computime\microservicetag\proxy\MicroserviceTagReaderProxy.java
+C:\Users\alima\Desktop\Stage\GITHUB\nfc_service\microservice-tag\src\main\java\ma\computime\microservicetag\feignconfig\FeignClientInterceptor.java
+C:\Users\alima\Desktop\Stage\GITHUB\nfc_service\microservice-tag\src\main\java\ma\computime\microservicetag\bean\NewTagBean.java
+C:\Users\alima\Desktop\Stage\GITHUB\nfc_service\microservice-tag\src\main\java\ma\computime\microservicetag\config\SleuthConfig.java
+C:\Users\alima\Desktop\Stage\GITHUB\nfc_service\microservice-tag\src\main\java\ma\computime\microservicetag\controller\TagController.java
+C:\Users\alima\Desktop\Stage\GITHUB\nfc_service\microservice-tag\src\main\java\ma\computime\microservicetag\bean\PersonneBean.java

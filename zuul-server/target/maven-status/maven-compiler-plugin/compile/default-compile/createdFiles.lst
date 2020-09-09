@@ -1,0 +1,9 @@
+ma\computime\zuulserver\model\AuthenticationResponse.class
+ma\computime\zuulserver\ZuulServerApplication.class
+ma\computime\zuulserver\jwtutil.class
+ma\computime\zuulserver\model\AuthenticationRequest.class
+ma\computime\zuulserver\WebSecurityConfiguration.class
+ma\computime\zuulserver\filters\JwtRequestFilter.class
+ma\computime\zuulserver\MyUserDetailsService.class
+ma\computime\zuulserver\config\SleuthConfig.class
+ma\computime\zuulserver\controller\SecurityController.class

@@ -1,0 +1,8 @@
+ma\computime\microservicetagreader\service\NFCService.class
+ma\computime\microservicetagreader\MicroserviceTagReaderApplication.class
+ma\computime\microservicetagreader\bean\TagBean.class
+ma\computime\microservicetagreader\entities\mData.class
+ma\computime\microservicetagreader\bean\PersonneBean.class
+ma\computime\microservicetagreader\restcontroller\TagReaderController.class
+ma\computime\microservicetagreader\service\NFCServiceImpl.class
+ma\computime\microservicetagreader\config\SleuthConfig.class
