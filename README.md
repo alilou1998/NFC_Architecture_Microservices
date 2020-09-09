@@ -21,7 +21,7 @@ Utiliser Docker :
 
 Test : 
 
-  -Authentification : POST -> http://localhost:8183/authenticate
+  - Authentification : POST -> http://localhost:8183/authenticate
 
                   Body :  {
                             "username":"admin",
@@ -32,7 +32,7 @@ Test :
                               jwt:"${your-token}"
                            }
 
-   -Enregistrer du tag : POST -> http://localhost:8183/microservice-tag-register/tagdateregister/add
+   - Enregistrer du tag : POST -> http://localhost:8183/microservice-tag-register/tagdateregister/add
 
                    Body : [
                             {
