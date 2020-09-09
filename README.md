@@ -12,11 +12,11 @@ Outils :
 
 Utiliser Docker : 
   
-  1- Se diriger vers le dossier root: mvn install
-  
-  2- docker-compose build
-  
-  3- docker-compose up -d
+                1- Se diriger vers le dossier root: mvn install
+
+                2- docker-compose build
+
+                3- docker-compose up -d
 
 Test : 
 
