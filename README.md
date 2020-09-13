@@ -21,7 +21,7 @@
 
   3- `docker-compose up -d`
 
-## Test : 
+## Test sur POSTMAN: 
 
   > 1- Authentification : POST -> http://localhost:8183/authenticate
 
