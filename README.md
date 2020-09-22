@@ -34,7 +34,7 @@
                               jwt:"${your-token}"
                            }
 
-  > 2- Enregistrer du tag : POST -> http://localhost:8183/microservice-tag-register/tagdateregister/add
+  > 2- Enregistrement du tag : POST -> http://localhost:8183/microservice-tag-register/tagdateregister/add
 
                    Body : [
                             {
